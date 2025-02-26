@@ -24,6 +24,7 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
+    console.log('Form submitted:', formData);
     e.preventDefault();
     console.log('Form submitted:', formData);
     
