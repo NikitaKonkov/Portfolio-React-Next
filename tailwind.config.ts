@@ -12,14 +12,6 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-    },
-  },
-  plugins: [],
-} satisfies Config;
-
-module.exports = {
-  theme: {
-    extend: {
       animation: {
         blob: 'blob 7s infinite',
         bounce: 'bounce 2s infinite',
@@ -40,6 +32,7 @@ module.exports = {
           },
         }
       }
-    }
-  }
-}
+    },
+  },
+  plugins: [],
+} satisfies Config;
