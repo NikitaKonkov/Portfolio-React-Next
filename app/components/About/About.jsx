@@ -1,4 +1,3 @@
-// About.jsx
 import React from 'react';
 import AboutHeader from './AboutHeader';
 import AboutText from './AboutText';
@@ -6,6 +5,7 @@ import Skills from './Skills';
 import AboutDetails from './AboutDetails';
 
 function About() {
+  // Define skills with their corresponding icons
   const skills = [
     { name: 'VS Code', icon: '/icons/vsc.png' },
     { name: 'VS Studio', icon: '/icons/vss.png' },
@@ -20,11 +20,11 @@ function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AboutHeader />
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <AboutText />
           <div className="space-y-6">
+            <AboutText />
             <Skills skills={skills} />
-            <AboutDetails />
           </div>
+          <AboutDetails />
         </div>
       </div>
     </section>
