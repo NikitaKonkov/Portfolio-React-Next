@@ -13,9 +13,10 @@
 
   export const aboutDetails = {
     name: "Nikita Wagner",
-    email: "nikita.wagner97@gmail.com",
-    location: "Homburg",
-    availability: "Open to opportunities",
+    email: "nikita.wagner1997@gmail.com",
+    location: "Berlin, Germany",
+    languages: ["English", "German", "Ukranian", "Russian"],
+    availability: "Reloaded and ready for action",
     resumeLink: "/dummy.pdf",
   };
 
