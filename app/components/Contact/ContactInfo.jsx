@@ -1,47 +1,81 @@
-import React from "react";
+// ContactInfo.jsx
+"use client";
+
+import React, { useState } from "react";
 import { contactInfo, socialLinksContent } from "./content";
 
-const ContactInfo = () => (
-  <div className="space-y-6 md:space-y-8 flex flex-col items-center">
-    {/* Contact Info Items */}
-    {Object.entries(contactInfo).map(([key, item]) => (
-      <div key={key} className="flex flex-col items-center space-y-3 w-full max-w-sm">
-        <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center overflow-hidden transition-colors duration-300">
-          <img
-            src={item.icon}
-            alt={item.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="text-center">
-          <h3 className="text-lg md:text-xl font-semibold text-light-text dark:text-dark-text">
-            {item.title}
-          </h3>
-          <p className="text-sm md:text-base text-light-text/70 dark:text-dark-text/70 mt-1">
-            {item.value}
-          </p>
-        </div>
+const ContactInfo = () => {
+  const [copyStates, setCopyStates] = useState({});
+
+  const handleCopy = async (itemId, value) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopyStates((prev) => ({
+        ...prev,
+        [itemId]: "Copied!",
+      }));
+
+      setTimeout(() => {
+        setCopyStates((prev) => ({
+          ...prev,
+          [itemId]: null,
+        }));
+      }, 1500);
+    } catch (err) {
+      setCopyStates((prev) => ({
+        ...prev,
+        [itemId]: "Failed to copy",
+      }));
+    }
+  };
+
+  return (
+    <div className="space-y-8 md:space-y-12 flex flex-col items-center">
+      {/* Contact Info Section - Larger Size */}
+      <div className="flex justify-center gap-8">
+        {Object.values(contactInfo).map((item) => (
+          <div key={item.id} className="relative">
+            <button
+              onClick={() => handleCopy(item.id, item.value)}
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-light-accent dark:focus:ring-dark-accent"
+              aria-label={`Copy ${item.id}`}
+            >
+              <img
+                src={item.icon}
+                alt={item.id}
+                className="w-3/4 h-3/4 object-contain"
+              />
+            </button>
+
+            {copyStates[item.id] && (
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs bg-black text-white px-2 py-1 rounded-md animate-fade-in-down">
+                {copyStates[item.id]}
+              </span>
+            )}
+          </div>
+        ))}
       </div>
-    ))}
-    {/* Social Links */}
-    <div className="flex justify-center space-x-3 md:space-x-4 mt-6 md:mt-8 w-full">
-      {socialLinksContent.map((link, index) => (
-        <a
-          key={index}
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity duration-300"
-        >
-          <img
-            src={link.icon}
-            alt={link.name}
-            className="w-full h-full object-cover"
-          />
-        </a>
-      ))}
+
+      {/* Social Links Section - Smaller Size */}
+      <div className="flex justify-center gap-4 mt-8">
+        {socialLinksContent.map((link, index) => (
+          <a
+            key={index}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity duration-300"
+          >
+            <img
+              src={link.icon}
+              alt={link.name}
+              className="w-3/4 h-3/4 object-contain"
+            />
+          </a>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ContactInfo;
