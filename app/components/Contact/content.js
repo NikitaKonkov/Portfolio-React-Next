@@ -2,6 +2,7 @@
 
 export const contactHeaderContent = {
   title: "Get In Touch",
+  text: "Links to my social media profiles and contact information are listed below. Feel free to reach out to me!"
 };
 
 export const contactInfo = {

@@ -32,7 +32,7 @@ const ContactInfo = () => {
   return (
 <div className="space-y-8 md:space-y-12 flex flex-col items-center">
   {/* Contact Info Section - Larger Size */}
-  <div className="flex justify-center gap-8">
+  <div className="flex justify-center gap-4">
     {Object.values(contactInfo).map((item) => (
       <div key={item.id} className="relative">
         <button
@@ -57,7 +57,7 @@ const ContactInfo = () => {
   </div>
 
   {/* Social Links Section */}
-  <div className="flex justify-center gap-0 flex-wrap mt-8">
+  <div className="flex justify-center flex-wrap">
     {socialLinksContent.map((link, index) => (
       <a
         key={index}

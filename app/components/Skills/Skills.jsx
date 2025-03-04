@@ -31,8 +31,8 @@ function Skills() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 relative">
-        <h2 class="text-5xl font-extrabold text-light-text dark:text-dark-text mb-4 relative inline-block">
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">My Skills</span>
+        <h2 className="text-5xl font-extrabold text-light-text dark:text-dark-text mb-4 relative inline-block">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">My Skills</span>
           </h2>
           <Description>Here's an overview of my technical expertise across different domains</Description>
         </div>
