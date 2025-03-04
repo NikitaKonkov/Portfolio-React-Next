@@ -1,7 +1,7 @@
 // Projects.jsx
 "use client"
 import React from 'react';
-import { useDotAnimation } from './useDotAnimation.js';
+import { useDotAnimation } from './Dots.js';
 import ProjectCard from './ProjectCard';
 import ProjectsHeader from './ProjectsHeader';
 import ViewMoreButton from './ViewMoreButton';

@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useRef, useState } from 'react';
-import Dot from './Dot';
+import Dot from './Dots';
 import SkillCategory from './SkillCategory';
 import { Title, Description } from './Typography';
 import { skillCategories } from './content';

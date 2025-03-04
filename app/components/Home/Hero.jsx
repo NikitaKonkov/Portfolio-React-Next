@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import HeroBackground from './HeroBackground';
 import HeroContent from './HeroContent';
-import AnimatedDots from './AnimatedDots';
+import AnimatedDots from './Dots';
 
 function Hero() {
   const [key, setKey] = useState(0);
