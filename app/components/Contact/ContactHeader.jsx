@@ -2,7 +2,7 @@ import React from "react";
 import { contactHeaderContent } from "./content";
 
 const ContactHeader = () => (
-  <div className="text-center mb-8 relative" role="region" aria-label="About Me Section">
+  <div className="text-center mb-0 relative" role="region" aria-label="About Me Section">
     <h2 className="text-4xl md:text-5xl font-extrabold text-light-text dark:text-dark-text mb-4 relative inline-block group">
       <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
         {contactHeaderContent.title}

@@ -82,3 +82,51 @@ header {
 .animate-fade-in-down {
   animation: fade-in-down 0.3s ease-out forwards;
 }
+
+/* Add this to your CSS file or a new CSS module */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  #contact {
+    padding: 8px; /* Reduce padding for mobile */
+  }
+
+  .max-w-6xl {
+    max-width: 100%; /* Make the container full width */
+  }
+
+  .grid {
+    display: block; /* Stack the grid items vertically */
+  }
+
+  .bg-light-primary,
+  .bg-dark-primary {
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .text-4xl {
+    font-size: 2rem; /* Adjust font size for mobile */
+  }
+
+  .text-5xl {
+    font-size: 2.5rem; /* Adjust font size for mobile */
+  }
+
+  .w-full {
+    width: 100%; /* Ensure full width for inputs and buttons */
+  }
+
+  .py-16 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .px-4 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .gap-12 {
+    gap: 8px; /* Reduce gap between elements */
+  }
+}
