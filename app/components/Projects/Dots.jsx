@@ -1,7 +1,6 @@
-// useDotAnimation.js
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-export const useDotAnimation = () => {
+const Dot = () => {
   const dotsRef = useRef(null);
   const animationFrameRef = useRef(null);
   const lastUpdateTimeRef = useRef(0);
@@ -123,3 +122,5 @@ export const useDotAnimation = () => {
 
   return dotsRef;
 };
+
+export default Dot;

@@ -1,14 +1,14 @@
 // Projects.jsx
 "use client"
 import React from 'react';
-import { useDotAnimation } from './Dots.js';
+import Dot from './Dots.jsx';
 import ProjectCard from './ProjectCard';
 import ProjectsHeader from './ProjectsHeader';
 import ViewMoreButton from './ViewMoreButton';
 import { projectsContent } from './content';
 
 function Projects() {
-  const dotsRef = useDotAnimation();
+  const dotsRef = Dot();
 
   return (
     <section id="projects" className="relative py-20 transition-colors duration-300">
