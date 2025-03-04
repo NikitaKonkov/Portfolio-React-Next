@@ -1,9 +1,7 @@
-/* Ensure Tailwind CSS is installed and configured correctly */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Add these rules at the beginning of the file */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +15,6 @@ body {
   position: relative;
 }
 
-/* ...existing code... */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -36,27 +33,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
 header {
-  width: 100%; /* Ensure the header spans the full width */
-  padding: 0 16px; /* Add padding to prevent content from touching the edges */
-  box-sizing: border-box; /* Include padding in the element's total width and height */
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .flex {
     display: flex;
-    justify-content: space-between; /* Distribute space between items */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
   }
 
   .header-logo {
-    flex-shrink: 0; /* Prevent logo from shrinking */
+    flex-shrink: 0;
   }
 
   .header-nav {
-    display: none; /* Hide the navigation on mobile */
+    display: none;
   }
 
   .header-controls {
@@ -65,9 +60,10 @@ header {
   }
 
   .mobile-nav {
-    display: block; /* Show mobile navigation */
+    display: block;
   }
 }
+
 @keyframes fade-in-down {
   from {
     opacity: 0;
@@ -83,37 +79,34 @@ header {
   animation: fade-in-down 0.3s ease-out forwards;
 }
 
-/* Add this to your CSS file or a new CSS module */
-
-/* Mobile styles */
 @media (max-width: 768px) {
   #contact {
-    padding: 8px; /* Reduce padding for mobile */
+    padding: 8px;
   }
 
   .max-w-6xl {
-    max-width: 100%; /* Make the container full width */
+    max-width: 100%;
   }
 
   .grid {
-    display: block; /* Stack the grid items vertically */
+    display: block;
   }
 
   .bg-light-primary,
   .bg-dark-primary {
-    padding: 10px; /* Adjust padding for mobile */
+    padding: 10px;
   }
 
   .text-4xl {
-    font-size: 2rem; /* Adjust font size for mobile */
+    font-size: 2rem;
   }
 
   .text-5xl {
-    font-size: 2.5rem; /* Adjust font size for mobile */
+    font-size: 2.5rem;
   }
 
   .w-full {
-    width: 100%; /* Ensure full width for inputs and buttons */
+    width: 100%;
   }
 
   .py-16 {
@@ -127,6 +120,6 @@ header {
   }
 
   .gap-12 {
-    gap: 8px; /* Reduce gap between elements */
+    gap: 8px;
   }
 }

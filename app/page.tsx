@@ -11,14 +11,11 @@ export default function Home() {
     <div className="app">
       <Header />
       <main>
-
         <Hero />
         <About />
         <Skills />
         <Contact />
         <Projects />
-
-
       </main>
       <Footer />
     </div>
