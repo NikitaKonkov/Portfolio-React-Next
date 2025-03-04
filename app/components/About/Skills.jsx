@@ -1,6 +1,7 @@
 import React from 'react';
+import { skills } from './content';
 
-const Skills = ({ skills }) => (
+const Skills = () => (
   <div className="pt-4">
     <h3 className="text-xl font-semibold text-light-text dark:text-dark-text mb-4">Core Technologies</h3>
     <div className="flex flex-wrap gap-2">

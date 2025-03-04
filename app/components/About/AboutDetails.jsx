@@ -1,4 +1,5 @@
 import React from 'react';
+import { aboutDetails } from './content';
 
 const AboutDetails = () => (
   <div className="bg-light-primary dark:bg-dark-primary rounded-xl shadow-lg p-8 transition-colors duration-300">
@@ -9,7 +10,7 @@ const AboutDetails = () => (
         </div>
         <div>
           <h3 className="text-sm font-medium text-light-text/70 dark:text-dark-text/70">Name</h3>
-          <p className="text-lg font-semibold text-light-text dark:text-dark-text">Nikita Wagner</p>
+          <p className="text-lg font-semibold text-light-text dark:text-dark-text">{aboutDetails.name}</p>
         </div>
       </div>
       <div className="flex items-center space-x-4">
@@ -18,7 +19,7 @@ const AboutDetails = () => (
         </div>
         <div>
           <h3 className="text-sm font-medium text-light-text/70 dark:text-dark-text/70">Email</h3>
-          <p className="text-lg font-semibold text-light-text dark:text-dark-text">nikita.wagner97@gmail.com</p>
+          <p className="text-lg font-semibold text-light-text dark:text-dark-text">{aboutDetails.email}</p>
         </div>
       </div>
       <div className="flex items-center space-x-4">
@@ -27,7 +28,7 @@ const AboutDetails = () => (
         </div>
         <div>
           <h3 className="text-sm font-medium text-light-text/70 dark:text-dark-text/70">Location</h3>
-          <p className="text-lg font-semibold text-light-text dark:text-dark-text">Homburg</p>
+          <p className="text-lg font-semibold text-light-text dark:text-dark-text">{aboutDetails.location}</p>
         </div>
       </div>
       <div className="flex items-center space-x-4">
@@ -36,11 +37,11 @@ const AboutDetails = () => (
         </div>
         <div>
           <h3 className="text-sm font-medium text-light-text/70 dark:text-dark-text/70">Availability</h3>
-          <p className="text-lg font-semibold text-light-text dark:text-dark-text">Open to opportunities</p>
+          <p className="text-lg font-semibold text-light-text dark:text-dark-text">{aboutDetails.availability}</p>
         </div>
       </div>
       <a
-        href="/dummy.pdf"
+        href={aboutDetails.resumeLink}
         download
         className="mt-8 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg text-base font-medium text-white bg-light-accent hover:bg-light-accent/90 dark:bg-dark-accent dark:hover:bg-dark-accent/90 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-light-accent dark:focus:ring-dark-accent"
       >
