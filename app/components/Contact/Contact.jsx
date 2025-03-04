@@ -11,12 +11,13 @@ function Contact() {
     subject: "",
     message: "",
   });
+  
   const [formStatus, setFormStatus] = useState({
     submitted: false,
     success: false,
     message: "",
   });
-
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -24,7 +25,7 @@ function Contact() {
       [name]: value,
     }));
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
@@ -40,14 +41,14 @@ function Contact() {
       message: "",
     });
   };
-
+  
   return (
-    <section id="contact" className="py-16 bg-light-secondary dark:bg-dark-secondary transition-colors duration-300">
+    <section id="contact" className="py-10 md:py-16 bg-light-secondary dark:bg-dark-secondary transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ContactHeader />
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12">
           <ContactInfo />
-          <ContactForm 
+          <ContactForm
             formData={formData}
             formStatus={formStatus}
             handleChange={handleChange}

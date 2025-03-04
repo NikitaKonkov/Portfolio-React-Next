@@ -1,6 +1,5 @@
 // Skills.jsx
 "use client";
-
 import React, { useRef, useState } from 'react';
 import Dot from './Dots';
 import SkillCategory from './SkillCategory';
@@ -11,16 +10,16 @@ function Skills() {
   const dotsRef = useRef(null);
   const dotsStateRef = useRef([]);
   const [key, setKey] = useState(0);
-
+  
   const getRandomColor = () => {
-    return `rgba(${Math.floor(Math.random() * 255)}, 
-                 ${Math.floor(Math.random() * 255)}, 
-                 ${Math.floor(Math.random() * 255)}, 
-                 ${0.5 + Math.random() * 0.5})`;
+    return `rgba(${Math.floor(Math.random() * 255)},
+      ${Math.floor(Math.random() * 255)},
+      ${Math.floor(Math.random() * 255)},
+      ${0.5 + Math.random() * 0.5})`;
   };
-
+  
   return (
-    <section id="skills" className="relative py-20 transition-colors duration-300">
+    <section id="skills" className="relative py-10 md:py-20 transition-colors duration-300">
       <div
         className="absolute inset-0 bg-fixed bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: "url('/big.jpg')", zIndex: -1 }}
@@ -30,11 +29,11 @@ function Skills() {
         <Dot getRandomColor={getRandomColor} dotsStateRef={dotsStateRef} dotsRef={dotsRef} />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 relative">
+        <div className="text-center mb-8 md:mb-16 relative">
           <Title>My Skills</Title>
           <Description>Here's an overview of my technical expertise across different domains</Description>
         </div>
-        <div className="space-y-20">
+        <div className="space-y-10 md:space-y-20">
           {skillCategories.map((category, categoryIndex) => (
             <SkillCategory key={categoryIndex} category={category} />
           ))}

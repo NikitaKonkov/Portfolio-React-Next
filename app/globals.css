@@ -3,6 +3,21 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Add these rules at the beginning of the file */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ...existing code... */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -21,3 +36,35 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
+header {
+  width: 100%; /* Ensure the header spans the full width */
+  padding: 0 16px; /* Add padding to prevent content from touching the edges */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+@media (max-width: 768px) {
+  .flex {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center items vertically */
+  }
+
+  .header-logo {
+    flex-shrink: 0; /* Prevent logo from shrinking */
+  }
+
+  .header-nav {
+    display: none; /* Hide the navigation on mobile */
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-nav {
+    display: block; /* Show mobile navigation */
+  }
+}

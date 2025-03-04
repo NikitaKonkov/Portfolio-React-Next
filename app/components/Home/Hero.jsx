@@ -8,10 +8,12 @@ function Hero() {
   const [key, setKey] = useState(0);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <HeroBackground />
-      <AnimatedDots key={key} setKey={setKey} />
-      <HeroContent />
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <div className="w-full">
+        <HeroBackground />
+        <AnimatedDots key={key} setKey={setKey} />
+        <HeroContent />
+      </div>
     </section>
   );
 }

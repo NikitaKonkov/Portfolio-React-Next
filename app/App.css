@@ -15,6 +15,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
 }
 
 html {
@@ -94,24 +97,4 @@ input:focus, textarea:focus {
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Keep the rest of your existing styles but update colors where needed */
-/* Add this to your global CSS file */
-html, body, #root {
-  height: 100%;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex-grow: 1;
-}
-
-footer {
-  margin-top: auto;
 }
