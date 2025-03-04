@@ -6,12 +6,12 @@ import AnimatedDots from './Dots';
 
 function Hero() {
   const [key, setKey] = useState(0);
-
+  
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      <div className="w-full">
-        <HeroBackground />
-        <AnimatedDots key={key} setKey={setKey} />
+    <section className="relative h-screen w-full overflow-hidden">
+      <HeroBackground />
+      <AnimatedDots key={key} setKey={setKey} />
+      <div className="relative z-10 h-full flex items-center justify-center">
         <HeroContent />
       </div>
     </section>

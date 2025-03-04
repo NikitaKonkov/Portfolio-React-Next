@@ -1,4 +1,3 @@
-// Skills.jsx
 "use client";
 import React, { useRef, useState } from 'react';
 import Dot from './Dots';
@@ -19,7 +18,8 @@ function Skills() {
   };
   
   return (
-    <section id="skills" className="relative py-10 md:py-20 transition-colors duration-300">
+    <section id="skills" className="relative py-10 md:py-20 transition-colors duration-300 flex flex-col items-center">
+      {/* Background layers */}
       <div
         className="absolute inset-0 bg-fixed bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: "url('/big.jpg')", zIndex: -1 }}
@@ -28,14 +28,21 @@ function Skills() {
       <div ref={dotsRef} className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <Dot getRandomColor={getRandomColor} dotsStateRef={dotsStateRef} dotsRef={dotsRef} />
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 md:mb-16 relative">
+
+      {/* Content container */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        {/* Header section */}
+        <div className="w-full text-center mb-8 md:mb-16 relative flex flex-col items-center">
           <Title>My Skills</Title>
           <Description>Here's an overview of my technical expertise across different domains</Description>
         </div>
-        <div className="space-y-10 md:space-y-20">
+
+        {/* Skills categories */}
+        <div className="w-full space-y-10 md:space-y-20 flex flex-col items-center">
           {skillCategories.map((category, categoryIndex) => (
-            <SkillCategory key={categoryIndex} category={category} />
+            <div key={categoryIndex} className="w-full flex justify-center">
+              <SkillCategory category={category} />
+            </div>
           ))}
         </div>
       </div>

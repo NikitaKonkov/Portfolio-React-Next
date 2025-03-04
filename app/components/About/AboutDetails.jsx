@@ -1,48 +1,21 @@
 import React from 'react';
 import { aboutDetails } from './content';
 
+// Reusable InfoItem component
+const InfoItem = ({ label, value }) => (
+  <div className="flex flex-col items-center space-y-1">
+    <h3 className="text-xs md:text-sm font-medium text-light-text/70 dark:text-dark-text/70">{label}</h3>
+    <p className="text-base md:text-lg font-semibold text-light-text dark:text-dark-text">{value}</p>
+  </div>
+);
+
 const AboutDetails = () => (
   <div className="bg-light-primary dark:bg-dark-primary rounded-xl shadow-lg p-6 md:p-8 transition-colors duration-300">
-    <div className="space-y-5 md:space-y-6">
-      <div className="flex items-center space-x-3 md:space-x-4">
-        <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-light-accent dark:bg-dark-accent rounded-full flex items-center justify-center transition-colors duration-300">
-          <i className="fas fa-user text-white text-lg md:text-xl"></i>
-        </div>
-        <div>
-          <h3 className="text-xs md:text-sm font-medium text-light-text/70 dark:text-dark-text/70">Name</h3>
-          <p className="text-base md:text-lg font-semibold text-light-text dark:text-dark-text">{aboutDetails.name}</p>
-        </div>
-      </div>
-      
-      <div className="flex items-center space-x-3 md:space-x-4">
-        <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-light-accent dark:bg-dark-accent rounded-full flex items-center justify-center transition-colors duration-300">
-          <i className="fas fa-envelope text-white text-lg md:text-xl"></i>
-        </div>
-        <div>
-          <h3 className="text-xs md:text-sm font-medium text-light-text/70 dark:text-dark-text/70">Email</h3>
-          <p className="text-base md:text-lg font-semibold text-light-text dark:text-dark-text">{aboutDetails.email}</p>
-        </div>
-      </div>
-      
-      <div className="flex items-center space-x-3 md:space-x-4">
-        <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-light-accent dark:bg-dark-accent rounded-full flex items-center justify-center transition-colors duration-300">
-          <i className="fas fa-map-marker-alt text-white text-lg md:text-xl"></i>
-        </div>
-        <div>
-          <h3 className="text-xs md:text-sm font-medium text-light-text/70 dark:text-dark-text/70">Location</h3>
-          <p className="text-base md:text-lg font-semibold text-light-text dark:text-dark-text">{aboutDetails.location}</p>
-        </div>
-      </div>
-      
-      <div className="flex items-center space-x-3 md:space-x-4">
-        <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-light-accent dark:bg-dark-accent rounded-full flex items-center justify-center transition-colors duration-300">
-          <i className="fas fa-briefcase text-white text-lg md:text-xl"></i>
-        </div>
-        <div>
-          <h3 className="text-xs md:text-sm font-medium text-light-text/70 dark:text-dark-text/70">Availability</h3>
-          <p className="text-base md:text-lg font-semibold text-light-text dark:text-dark-text">{aboutDetails.availability}</p>
-        </div>
-      </div>
+    <div className="space-y-5 md:space-y-6 flex flex-col items-center">
+      <InfoItem label="Name" value={aboutDetails.name} />
+      <InfoItem label="Email" value={aboutDetails.email} />
+      <InfoItem label="Location" value={aboutDetails.location} />
+      <InfoItem label="Availability" value={aboutDetails.availability} />
       
       <a
         href={aboutDetails.resumeLink}
