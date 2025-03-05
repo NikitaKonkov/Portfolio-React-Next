@@ -49,6 +49,15 @@ export const projectsContent = {
         image: './projects/pacman.png',
         liveLink: 'https://github.com/NikitaKonkov/16bit-x86-2DGameEngine',
         codeLink: 'https://github.com/NikitaKonkov/16bit-x86-2DGameEngine'
+      },
+      {
+        id: 5,
+        title: '2D Pacman Game Engine in 16bit Assembly',
+        description: 'This project demonstrates how to build a bootable game using a bootloader and a second-stage game binary. It uses 16-bit assembly language to create a simple 2D game engine for Pacman.',
+        technologies: ['QEMU', 'NASM', '16bit Assembly'],
+        image: './projects/hummel.png',
+        liveLink: 'https://github.com/NikitaKonkov/16bit-x86-2DGameEngine',
+        codeLink: 'https://github.com/NikitaKonkov/16bit-x86-2DGameEngine'
       }
     ],
     viewMore: {
