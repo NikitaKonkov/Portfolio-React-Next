@@ -53,11 +53,11 @@ export const projectsContent = {
       {
         id: 5,
         title: '2D Pacman Game Engine in 16bit Assembly',
-        description: 'This project demonstrates how to build a bootable game using a bootloader and a second-stage game binary. It uses 16-bit assembly language to create a simple 2D game engine for Pacman.',
-        technologies: ['QEMU', 'NASM', '16bit Assembly'],
+        description: 'HUMMEL ENCODER is a Java Swing application that provides encryption and decryption functionality using the HUMMEL cipher algorithm.',
+        technologies: ['Java', 'Java Swing'],
         image: './projects/hummel.png',
-        liveLink: 'https://github.com/NikitaKonkov/16bit-x86-2DGameEngine',
-        codeLink: 'https://github.com/NikitaKonkov/16bit-x86-2DGameEngine'
+        liveLink: 'https://github.com/NikitaKonkov/Java-Encoder-with-simple-UI',
+        codeLink: 'https://github.com/NikitaKonkov/Java-Encoder-with-simple-UI'
       }
     ],
     viewMore: {
