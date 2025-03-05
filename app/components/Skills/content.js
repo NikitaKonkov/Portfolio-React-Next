@@ -10,8 +10,8 @@ export const skillCategories = [
       skills: [
         { name: 'HTML', level: 'Intermediate', image: '/skills/html.png' },
         { name: 'JavaScript', level: 'Intermediate', image: '/skills/javascript.png' },
-        { name: 'React', level: 'Beginner', image: '/skills/react.png' },
-        { name: 'CSS3', level: 'Beginner', image: '/skills/css.png' }
+        { name: 'React', level: 'Intermediate', image: '/skills/react.png' },
+        { name: 'CSS3', level: 'Intermediate', image: '/skills/css.png' }
       ]
     },
     {
@@ -31,8 +31,8 @@ export const skillCategories = [
       title: "System/Low Level Development",
       backgroundImage: '/backgrounds/cpu.gif',
       gradientColors: {
-        from: 'rgba(250, 150, 0, 1)',
-        to: 'rgba(200, 0, 0, 0.9)'
+        from: 'rgba(250, 150, 0, 5)',
+        to: 'rgba(200, 0, 0, 0.5)'
       },
       skills: [
         { name: 'C++', level: 'Advanced', image: '/skills/cpp.png' },

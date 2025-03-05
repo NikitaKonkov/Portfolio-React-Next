@@ -26,5 +26,6 @@
     { name: 'PyCharm', icon: '/icons/pycharm.png' },
     { name: 'IntelliJ', icon: '/icons/IntelliJ.png' },
     { name: 'Blender', icon: '/icons/blender.png' },
-    { name: 'Unreal Engine', icon: '/icons/unreal.png' }
+    { name: 'Unreal Engine', icon: '/icons/unreal.png' },
+    { name: 'Chat-GPT', icon: '/icons/gpt.png' }
   ];

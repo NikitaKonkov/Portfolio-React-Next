@@ -7,30 +7,39 @@ export const projectsContent = {
     projects: [
       {
         id: 1,
-        title: 'PS4 HEN VTX',
-        description: 'A fully responsive e-commerce website with product filtering, cart functionality, and payment integration.',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-        image: 'https://wololo.net/wagic/wp-content/uploads/2024/05/goldhen_pppwn.jpg',
-        liveLink: 'https://github.com/NikitaKonkov/ps4-hen-vtx',
-        codeLink: 'https://github.com/NikitaKonkov/ps4-hen-vtx'
+        title: 'SIMD Hashing in C++',
+        description: 'This custom C++ file hashing algorithm use advanced techniques like parallel processing, SIMD optimization, and asynchronous I/O to achieve high performance on modern hardware for very large files (100 GB+).',
+        technologies: ['C++', 'AVX', 'Windows API'],
+        image: 'https://www.shutterstock.com/image-illustration/cyber-hacking-ciphertext-random-computer-600nw-2013022529.jpg',
+        liveLink: 'https://github.com/NikitaKonkov/SIMD-Hashing-CPP',
+        codeLink: 'https://github.com/NikitaKonkov/SIMD-Hashing-CPP'
       },
       {
         id: 2,
-        title: 'THF Encryption',
-        description: 'A drag-and-drop task management application with user authentication and real-time updates.',
-        technologies: ['React', 'Firebase', 'Material-UI'],
-        image: 'https://kinsta.com/wp-content/uploads/2023/07/what-is-encryption.jpg',
-        liveLink: 'https://github.com/NikitaKonkov/THF_Encryption',
-        codeLink: 'https://github.com/NikitaKonkov/THF_Encryption'
+        title: 'URL shortener ',
+        description: 'This is a URL shortener service that allows users to create,retrieve, update, and delete shortened URLs.',
+        technologies: ['Java', 'PostgresSQL', 'Spring Boot'],
+        image: 'https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/01/url-shortener.jpg',
+        liveLink: 'https://github.com/NikitaKonkov/Java-Spring-Boot-URL-shortener',
+        codeLink: 'https://github.com/NikitaKonkov/Java-Spring-Boot-URL-shortener'
       },
       {
         id: 3,
-        title: 'RaspberryPi Projects',
-        description: 'A weather application that displays current and forecasted weather data based on user location or search.',
-        technologies: ['JavaScript', 'OpenWeather API', 'CSS3'],
-        image: 'https://heise.cloudimg.io/width/610/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/2/5/0/5/4/3/8/Bildschirmfoto_2018-09-21_um_11-bf75b0b94648525a.png',
-        liveLink: 'https://github.com/NikitaKonkov/RaspberryPi',
-        codeLink: 'https://github.com/NikitaKonkov/RaspberryPi'
+        title: 'CUDA 3D Engine in Terminal',
+        description: 'A 3D engine that renders 3D models in the terminal using ASCII characters. It uses CUDA for parallel processing and Windows API for terminal rendering and file reading.',
+        technologies: ['C++', 'CUDA', 'Windows API'],
+        image: './projects/cuda.png',
+        liveLink: 'https://github.com/NikitaKonkov/CUDA-3D-Engine-inside-Terminal',
+        codeLink: 'https://github.com/NikitaKonkov/CUDA-3D-Engine-inside-Terminal'
+      },
+      {
+        id: 3,
+        title: 'Portfolio Website using React',
+        description: 'My personal portfolio website built using React and TypeScript. It showcases my projects, skills, and experience in web development.',
+        technologies: ['React', 'TypeScript', 'CSS3'],
+        image: './projects/portfolio.png',
+        liveLink: 'https://github.com/NikitaKonkov/Portfolio-React-Typescript',
+        codeLink: 'https://github.com/NikitaKonkov/Portfolio-React-Typescript'
       }
     ],
     viewMore: {
