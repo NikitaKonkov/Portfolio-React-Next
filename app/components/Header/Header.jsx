@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Header Component
 function Header() {
@@ -8,6 +8,7 @@ function Header() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -34,10 +35,31 @@ function Header() {
       }
       setLastScrollY(currentScrollY);
     };
-
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
+
+  // Handle document clicks to toggle header visibility
+  useEffect(() => {
+    const handleDocumentClick = (event) => {
+      // If click is on the header, do nothing
+      if (headerRef.current && headerRef.current.contains(event.target)) {
+        return;
+      }
+      
+      // Toggle header visibility on clicks outside the header
+      setIsHeaderVisible(prev => !prev);
+    };
+
+    // Add the click event listener to the document
+    document.addEventListener('click', handleDocumentClick);
+    
+    // Clean up the event listener when component unmounts
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -66,13 +88,22 @@ function Header() {
     setMenuOpen(false);
   };
 
+  // Prevent clicks on the header from bubbling up to document
+  const handleHeaderClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <header className={`fixed top-0 left-0 right-0 w-full bg-light-primary dark:bg-dark-primary shadow-md z-50 transition-all duration-300 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <header 
+      ref={headerRef}
+      onClick={handleHeaderClick}
+      className={`fixed top-0 left-0 right-0 w-full bg-light-primary dark:bg-dark-primary shadow-md z-50 transition-all duration-300 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
+    >
       <div className="max-w-[100vw] px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <HeaderLogo />
           <HeaderNav handleNavClick={handleNavClick} />
-          <HeaderControls 
+          <HeaderControls
             darkMode={darkMode}
             isAnimating={isAnimating}
             toggleDarkMode={toggleDarkMode}
@@ -80,7 +111,7 @@ function Header() {
             menuOpen={menuOpen}
           />
         </div>
-        <MobileNav 
+        <MobileNav
           menuOpen={menuOpen}
           handleNavClick={handleNavClick}
         />
@@ -153,7 +184,7 @@ function HeaderNav({ handleNavClick }) {
       <ul className="flex space-x-8">
         {['Home', 'About', 'Skills', 'Contact', 'Projects'].map((item) => (
           <li key={item}>
-            <a 
+            <a
               href={`#${item.toLowerCase()}`}
               onClick={(e) => handleNavClick(e, item.toLowerCase())}
               className="text-light-text dark:text-dark-text hover:text-light-accent dark:hover:text-dark-accent transition-colors duration-300"
