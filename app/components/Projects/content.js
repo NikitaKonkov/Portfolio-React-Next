@@ -52,7 +52,7 @@ export const projectsContent = {
       },
       {
         id: 5,
-        title: '2D Pacman Game Engine in 16bit Assembly',
+        title: 'Java HUMMEL Text Crypter',
         description: 'HUMMEL ENCODER is a Java Swing application that provides encryption and decryption functionality using the HUMMEL cipher algorithm.',
         technologies: ['Java', 'Java Swing'],
         image: './projects/hummel.png',
