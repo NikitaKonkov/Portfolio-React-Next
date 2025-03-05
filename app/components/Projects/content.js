@@ -51,7 +51,7 @@ export const projectsContent = {
         codeLink: 'https://github.com/NikitaKonkov/16bit-x86-2DGameEngine'
       },
       {
-        id: 5,
+        id: 6,
         title: 'Java HUMMEL Text Crypter',
         description: 'HUMMEL ENCODER is a Java Swing application that provides encryption and decryption functionality using the HUMMEL cipher algorithm.',
         technologies: ['Java', 'Java Swing'],
