@@ -30,7 +30,7 @@ export const socialLinks = [
     },
     {
       icon: "fas fa-map-marker-alt",
-      content: "Homburg, Saarland",
+      content: "Germany, Berlin",
       isLink: false
     }
   ];
