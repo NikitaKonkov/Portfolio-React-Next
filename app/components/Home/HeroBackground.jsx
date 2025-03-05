@@ -33,7 +33,7 @@ export default function HeroBackground() {
         
         /* Hue rotation animation */
         .hue-rotate-animation {
-          animation: hueRotate 180s infinite linear;
+          animation: hueRotate 60s infinite linear;
           filter: saturate(0.8); /* Reduce saturation for more pastel look */
         }
         @keyframes hueRotate {
@@ -65,7 +65,7 @@ export default function HeroBackground() {
           background-size: 100px 100px;
           transform: rotateX(60deg);
           transform-origin: center bottom;
-          animation: gridMove 20s infinite linear;
+          animation: gridMove 30s infinite linear;
         }
         
         /* Dark mode specific styles */

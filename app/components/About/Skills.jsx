@@ -4,7 +4,7 @@ import { skills } from './content';
 const Skills = () => (
   <div className="pt-4">
     <h3 className="text-xl font-semibold text-light-text dark:text-dark-text mb-4">Main Development Software</h3>
-    <div className="flex flex-wrap gap-2 justify-start">
+    <div className="flex flex-wrap gap-2">
       {skills.map((skill) => (
         <span
           key={skill.name}

@@ -30,11 +30,11 @@ function Projects() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ProjectsHeader />
         
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
-  {projectsContent.projects.map(project => (
-    <ProjectCard key={project.id} project={project} />
-  ))}
-</div>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
+          {projectsContent.projects.map(project => (
+            <ProjectCard key={project.id} project={project}/>
+              ))}
+        </div>
 
         <ViewMoreButton />
       </div>

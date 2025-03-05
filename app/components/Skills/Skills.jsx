@@ -138,29 +138,26 @@ const Dot = ({ getRandomColor, dotsStateRef, dotsRef }) => {
   return null;
 };
 
-// SkillItem Component
 const SkillItem = ({ skill, onClick }) => {
   return (
-    <div 
-      className="w-full xs:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 md:p-4 cursor-pointer"
+    <div
+      className="w-[180px] mx-auto xs:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 md:p-4 cursor-pointer"
       onClick={() => onClick(skill)}
     >
-      <div className="relative rounded-lg shadow-xl p-4 md:p-6 flex flex-col items-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl overflow-hidden bg-light-secondary/90 dark:bg-dark-secondary/90 border border-blue-500/20 hover:border-blue-500/50 h-full">
-        
-        <div className="w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4 overflow-hidden bg-white/90 dark:bg-dark-primary/90 p-2 rounded-full flex items-center justify-center">
+      <div className="relative rounded-lg shadow-xl p-2 md:p-6 flex flex-row xs:flex-col items-center justify-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-light-secondary/90 dark:bg-dark-secondary/90 border border-blue-500/20 hover:border-blue-500/50 h-[100px] xs:h-auto xs:aspect-square">
+        <div className="w-16 h-16 md:w-16 md:h-16 mr-3 xs:mr-0 xs:mb-2 md:mb-4 overflow-hidden bg-white/90 dark:bg-dark-primary/90 p-1.5 md:p-2 rounded-full flex items-center justify-center shrink-0">
           <img src={skill.image} alt={`${skill.name} logo`} className="w-full h-full object-contain" />
         </div>
-
-  <div className="flex flex-col items-center">
-    <h3 className="text-base md:text-xl font-semibold text-light-text dark:text-dark-text mb-2 py-1 px-2 md:px-3 rounded bg-light-primary/80 dark:bg-dark-primary/80">
-      {skill.name}
-    </h3>
-    <h3 className="text-sm md:text-base text-light-text/90 dark:text-dark-text/90 mt-2 py-1 px-2 md:px-3 rounded bg-light-primary/70 dark:bg-dark-primary/70">
-      {skill.level}
-    </h3>
-  </div>
-</div>
+        <div className="flex flex-col items-start xs:items-center justify-center">
+          <h3 className="text-xs md:text-xl font-semibold text-light-text dark:text-dark-text mb-0.5 py-0.5 px-1.5 md:px-3 rounded bg-light-primary/80 dark:bg-dark-primary/80 text-center max-w-[100px] truncate">
+            {skill.name}
+          </h3>
+          <h3 className="text-[10px] md:text-base text-light-text/90 dark:text-dark-text/90 py-0.5 px-1.5 md:px-3 rounded bg-light-primary/70 dark:bg-dark-primary/70 text-center">
+            {skill.level}
+          </h3>
+        </div>
       </div>
+    </div>
   );
 };
 
@@ -171,16 +168,19 @@ const SkillCategory = ({ category, onSkillClick }) => {
       <div className="absolute inset-0 -m-4 z-0 rounded-xl overflow-hidden" style={{
         backgroundImage: `url(${category.backgroundImage})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        filter: 'blur(1px)', // Added blur effect
+        opacity: 0.8
       }}></div>
       <div className="flex items-center justify-center mb-10">
         <div className="h-1 w-16 bg-blue-500 mr-4"></div>
-        <div className="relative px-6 py-2 rounded-lg shadow-lg" style={{
-          background: `linear-gradient(to right, ${category.gradientColors.from}, ${category.gradientColors.to})`,
-          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)'
-        }}>
+        <div className="relative px-6 py-2 rounded-lg shadow-lg"
+          style={{
+            background: `linear-gradient(to right, ${category.gradientColors.from}, ${category.gradientColors.to})`,
+            boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)'
+          }}>
           <h3 className="text-2xl font-bold text-white" style={{
-            textShadow: '0px 1px 2px rgba(0, 0, 0, 1)',
+            textShadow: '0px 1px 2px rgba(0, 0, 0, 0.5)',
             letterSpacing: '0.05em'
           }}>
             {category.title}
