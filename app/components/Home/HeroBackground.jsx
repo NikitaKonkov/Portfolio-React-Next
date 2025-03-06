@@ -40,13 +40,13 @@ export default function HeroBackground() {
 
         /* Pastel color definitions with transparency */
         .from-pastel-indigo {
-          --pastel-indigo: rgba(156, 146, 209, 0.5); /* 50% transparency */
+          --pastel-indigo: rgba(156, 146, 209, 0.3); /* 50% transparency */
         }
         .via-pastel-purple {
-          --pastel-purple: rgba(187, 158, 209, 0.5); /* 50% transparency */
+          --pastel-purple: rgba(187, 158, 209, 0.3); /* 50% transparency */
         }
         .to-pastel-fuchsia {
-          --pastel-fuchsia: rgba(209, 162, 192, 0.5); /* 50% transparency */
+          --pastel-fuchsia: rgba(209, 162, 192, 0.3); /* 50% transparency */
         }
 
         /* Background gradient with pastel colors */
@@ -61,7 +61,7 @@ export default function HeroBackground() {
 
         /* Hue rotation animation */
         .hue-rotate-animation {
-          animation: hueRotate 60s infinite linear;
+          animation: hueRotate 360s infinite linear;
           filter: saturate(0.8); /* Reduce saturation for more pastel look */
         }
         @keyframes hueRotate {
@@ -83,12 +83,12 @@ export default function HeroBackground() {
           right: -120%;
           height: 120%;
           background-image: linear-gradient(to bottom,
-            rgba(255, 255, 255, 1) 0px,
-            rgba(255, 255, 255, 1) 5px,
+            rgba(0, 0, 0, 1) 0px,
+            rgba(0, 0, 0, 1) 5px,
             transparent 5px),
             linear-gradient(to right,
-            rgba(255, 255, 255, 1) 0px,
-            rgba(255, 255, 255, 1) 5px,
+            rgba(0, 0, 0, 1) 0px,
+            rgba(0, 0, 0, 1) 5px,
             transparent 5px);
           background-size: 100px 100px;
           transform: rotateX(60deg);
@@ -99,12 +99,12 @@ export default function HeroBackground() {
         /* Dark mode specific styles */
         :global(.dark) .grid-floor {
           background-image: linear-gradient(to bottom,
-            rgba(0, 0, 0, 1) 0px,
-            rgba(0, 0, 0, 1) 5px,
+            rgba(255, 255, 255, 1) 0px,
+            rgba(255, 255, 255, 1) 5px,
             transparent 5px),
             linear-gradient(to right,
-            rgba(0, 0, 0, 1) 0px,
-            rgba(0, 0, 0, 1) 5px,
+            rgba(255, 255, 255, 1) 0px,
+            rgba(255, 255, 255, 1) 5px,
             transparent 5px);
         }
 
