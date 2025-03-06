@@ -11,7 +11,8 @@ export const skillCategories = [
         { name: 'HTML', level: 'Intermediate', image: '/skills/html.png' },
         { name: 'JavaScript', level: 'Intermediate', image: '/skills/javascript.png' },
         { name: 'React', level: 'Intermediate', image: '/skills/react.png' },
-        { name: 'CSS3', level: 'Intermediate', image: '/skills/css.png' }
+        { name: 'CSS3', level: 'Intermediate', image: '/skills/css.png' },
+        { name: 'NextJS', level: 'Intermediate', image: '/skills/nextjs.png' }
       ]
     },
     {
