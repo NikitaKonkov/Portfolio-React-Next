@@ -15,7 +15,7 @@ export default function AnimatedDots({ animationKey, setKey }) {
   const createDots = () => {
     if (!dotsRef.current) return;
     const dotsContainer = dotsRef.current;
-    const numberOfDots = 80;
+    const numberOfDots = 160;
     dotsContainer.innerHTML = '';
     dotsStateRef.current = [];
     
@@ -32,7 +32,7 @@ export default function AnimatedDots({ animationKey, setKey }) {
       dot.style.left = `${left}%`;
       dot.style.top = `${top}%`;
       dot.style.opacity = 0.1 + (yPosition * 0.7);
-      dot.style.backgroundColor = getRandomColor();
+      dot.style.backgroundColor = size;
       
       dotsStateRef.current.push({
         element: dot,
