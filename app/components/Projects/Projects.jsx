@@ -16,7 +16,7 @@ function Projects() {
       <div
         className="absolute inset-0 bg-fixed bg-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage: "url('/big.jpg')",
+          backgroundImage: "url('/star.webp')",
           zIndex: -1
         }}
       ></div>

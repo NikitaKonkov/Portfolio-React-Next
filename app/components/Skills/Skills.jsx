@@ -38,7 +38,7 @@ const SkillCategory = ({ category, onSkillClick }) => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'blur(1px)',
-          opacity: 0.3
+          opacity: 0.1
         }}
       ></div>
       <div className="flex items-center justify-center mb-10">
@@ -137,7 +137,7 @@ function Skills() {
       {/* Background elements */}
       <div
         className="absolute inset-0 bg-fixed bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: "url('/big.jpg')", zIndex: -1 }}
+        style={{ backgroundImage: "url('/star.webp')", zIndex: -1 }}
       ></div>
       <div className="absolute inset-0 bg-dark-trinary/70 dark:bg-dark-primary/80 z-0"></div>
       <div ref={dotsRef} className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
