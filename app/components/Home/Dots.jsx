@@ -15,7 +15,7 @@ export default function AnimatedDots({ animationKey, setKey }) {
   const createDots = () => {
     if (!dotsRef.current) return;
     const dotsContainer = dotsRef.current;
-    const numberOfDots = 160;
+    const numberOfDots = 80;
     dotsContainer.innerHTML = '';
     dotsStateRef.current = [];
     
