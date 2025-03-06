@@ -166,7 +166,7 @@ const SkillCategory = ({ category, onSkillClick }) => {
   return (
     <div className="relative z-10 p-8 bg-light-secondary/30 dark:bg-dark-secondary/30 rounded-xl shadow-lg">
       <div 
-        className="absolute inset-0 -m-4 z-0 rounded-xl overflow-hidden" 
+        className="absolute inset-0 -m-2 z-0 rounded-xl overflow-hidden" 
         style={{
           backgroundImage: `url(${category.backgroundImage})`,
           backgroundSize: 'cover',
