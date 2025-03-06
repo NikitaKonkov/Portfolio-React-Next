@@ -17,16 +17,25 @@ export default function HeroBackground() {
       <style jsx>{`
         /* Parallax Background */
         .parallax-background {
-          background-image: url('/star.webp'); /* Replace with your image path */
-          background-attachment: fixed;
-          background-size: cover;
-          background-position: center;
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
           z-index: -3; /* Ensure it's behind other elements */
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+        }
+
+        /* Default background (when dark mode is disabled) */
+        .parallax-background {
+          background-image: url('/stari.webp');
+        }
+
+        /* Dark mode background (when dark mode is enabled) */
+        :global(.dark) .parallax-background {
+          background-image: url('/star.webp');
         }
 
         /* Pastel color definitions with transparency */
