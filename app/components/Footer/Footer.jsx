@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import FooterHeader from './FooterHeader';
 import FooterContent from './FooterContent';
 import FooterBottomBar from './FooterBottomBar';
 

@@ -7,7 +7,7 @@ const legalLinks = [
 ];
 
 const FooterBottomBar = ({ year }) => (
-  <div className="bg-gray-200 dark:bg-dark-primary border-t dark:border-dark-secondary">
+  <div className="bg-light-primary text-dark-text  dark:bg-dark-primary border-t dark:border-dark-secondary">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <p className="text-light-text/60 dark:text-dark-text/60 text-sm">
