@@ -3,24 +3,43 @@ import React from 'react';
 export default function HeroBackground() {
   return (
     <div className="absolute inset-0 z-[-2] overflow-hidden">
-      {/* Synthwave Sky Background - Modified to be more pastel */}
+      {/* Parallax Background Image */}
+      <div className="parallax-background"></div>
+
+      {/* Synthwave Sky Background - Modified to be more pastel and transparent */}
       <div className="absolute inset-0 bg-gradient-to-b from-pastel-indigo via-pastel-purple to-pastel-fuchsia hue-rotate-animation"></div>
+
       {/* Grid */}
       <div className="absolute bottom-0 left-0 right-0 h-[50vh] perspective">
         <div className="grid-floor"></div>
       </div>
+
       <style jsx>{`
-        /* Pastel color definitions */
+        /* Parallax Background */
+        .parallax-background {
+          background-image: url('/star.webp'); /* Replace with your image path */
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -3; /* Ensure it's behind other elements */
+        }
+
+        /* Pastel color definitions with transparency */
         .from-pastel-indigo {
-          --pastel-indigo: rgb(156, 146, 209); /* Pastel version of indigo-900 */
+          --pastel-indigo: rgba(156, 146, 209, 0.5); /* 50% transparency */
         }
         .via-pastel-purple {
-          --pastel-purple: rgb(187, 158, 209); /* Pastel version of purple-800 */
+          --pastel-purple: rgba(187, 158, 209, 0.5); /* 50% transparency */
         }
         .to-pastel-fuchsia {
-          --pastel-fuchsia: rgb(209, 162, 192); /* Pastel version of fuchsia-700 */
+          --pastel-fuchsia: rgba(209, 162, 192, 0.5); /* 50% transparency */
         }
-        
+
         /* Background gradient with pastel colors */
         .bg-gradient-to-b {
           background-image: linear-gradient(
@@ -30,7 +49,7 @@ export default function HeroBackground() {
             var(--pastel-fuchsia)
           );
         }
-        
+
         /* Hue rotation animation */
         .hue-rotate-animation {
           animation: hueRotate 60s infinite linear;
@@ -40,13 +59,13 @@ export default function HeroBackground() {
           0% { filter: hue-rotate(0deg) saturate(0.8); }
           100% { filter: hue-rotate(360deg) saturate(0.8); }
         }
-        
+
         /* Perspective for grid */
         .perspective {
           perspective: 1000px;
           perspective-origin: center bottom;
         }
-        
+
         /* Grid floor with thicker lines using multi-position color stops */
         .grid-floor {
           position: absolute;
@@ -67,7 +86,7 @@ export default function HeroBackground() {
           transform-origin: center bottom;
           animation: gridMove 30s infinite linear;
         }
-        
+
         /* Dark mode specific styles */
         :global(.dark) .grid-floor {
           background-image: linear-gradient(to bottom,
@@ -79,7 +98,7 @@ export default function HeroBackground() {
             rgba(0, 0, 0, 1) 5px,
             transparent 5px);
         }
-        
+
         @keyframes gridMove {
           0% { background-position: 0 0; }
           100% { background-position: 0 2500px; }

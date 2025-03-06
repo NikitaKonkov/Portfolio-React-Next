@@ -36,7 +36,7 @@ export const projectsContent = {
         id: 4,
         title: 'Portfolio Website using React',
         description: 'My personal portfolio website built using React and TypeScript. It showcases my projects, skills, and experience in web development.',
-        technologies: ['React', 'TypeScript', 'CSS3'],
+        technologies: ['React', 'TypeScript', 'CSS3', 'NextJS', 'HTML'],
         image: './projects/portfolio.png',
         liveLink: 'https://github.com/NikitaKonkov/Portfolio-React-Typescript',
         codeLink: 'https://github.com/NikitaKonkov/Portfolio-React-Typescript'
