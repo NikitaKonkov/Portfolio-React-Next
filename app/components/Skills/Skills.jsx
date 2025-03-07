@@ -10,7 +10,14 @@ const SkillItem = ({ skill, onClick }) => {
       className="w-[180px] mx-auto xs:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 md:p-4 cursor-pointer"
       onClick={() => onClick(skill)}
     >
-      <div className="relative rounded-lg shadow-xl p-2 md:p-6 flex flex-row xs:flex-col items-center justify-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-light-secondary/90 dark:bg-dark-secondary/90 border border-blue-500/20 hover:border-blue-500/50 h-[100px] xs:h-auto xs:aspect-square">
+      <div 
+        className="relative rounded-lg shadow-xl p-2 md:p-6 flex flex-row xs:flex-col items-center justify-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-blue-500/20 hover:border-blue-500/50 h-[100px] xs:h-auto xs:aspect-square"
+        style={{
+          backgroundColor: `${skill.color || 'var(--light-secondary)'}`,
+          opacity: 0.9,
+          transition: 'all 0.3s ease'
+        }}
+      >
         <div className="w-16 h-16 md:w-16 md:h-16 mr-3 xs:mr-0 xs:mb-2 md:mb-4 overflow-hidden bg-white/90 dark:bg-dark-primary/90 p-1.5 md:p-2 rounded-full flex items-center justify-center shrink-0">
           <img src={skill.image} alt={`${skill.name} logo`} className="w-full h-full object-contain" />
         </div>
@@ -30,7 +37,7 @@ const SkillItem = ({ skill, onClick }) => {
 // SkillCategory Component
 const SkillCategory = ({ category, onSkillClick }) => {
   return (
-    <div className="relative z-10 p-8 bg-light-secondary/30 dark:bg-dark-secondary/30 rounded-xl shadow-lg">
+    <div className="relative z-10 p-8 rounded-xl shadow-lg">
       <div 
         className="absolute inset-0 -m-2 z-0 rounded-xl overflow-hidden" 
         style={{
@@ -38,7 +45,7 @@ const SkillCategory = ({ category, onSkillClick }) => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'blur(1px)',
-          opacity: 0.1
+          opacity: 0.2
         }}
       ></div>
       <div className="flex items-center justify-center mb-10">
@@ -73,7 +80,7 @@ const SkillCategory = ({ category, onSkillClick }) => {
         ></div>
       </div>
       <div className="mb-10 rounded-xl relative z-10 px-4 py-8">
-        <div className="flex flex-wrap justify-center" style={{ margin: '-64px' }}>
+        <div className="flex flex-wrap justify-around" style={{ margin: '-64px' }}>
           {category.skills.map((skill, skillIndex) => (
             <SkillItem key={skillIndex} skill={skill} onClick={onSkillClick} />
           ))}
@@ -82,7 +89,6 @@ const SkillCategory = ({ category, onSkillClick }) => {
     </div>
   );
 };
-
 // Typography Components
 export function Title({ children, className = '' }) {
   return (
