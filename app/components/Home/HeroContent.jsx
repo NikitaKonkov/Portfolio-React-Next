@@ -5,7 +5,7 @@ import { heroContent } from './content';
 
 export default function HeroContent() {
   return (
-    <div className="px-4 lg:px-2 bg-light-secondary/70 dark:bg-dark-secondary/70 py-10 rounded-lg backdrop-blur-sm">
+    <div className="px-4 lg:px-2 bg-violet-100/50 dark:bg-dark-secondary/70 py-10 rounded-lg backdrop-blur-sm">
       <div className="text-center">
         <h1 className="text-4xl tracking-tight font-extrabold text-light-text dark:text-dark-text sm:text-5xl md:text-6xl">
           <span className="italic block">{heroContent.title}</span>

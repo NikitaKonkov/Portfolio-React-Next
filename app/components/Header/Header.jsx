@@ -1,6 +1,14 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 
+// StickyLogo Component
+function StickyLogo() {
+  return (
+    <div className="fixed left-1 z-50 opacity-50">
+      <HeaderLogo />
+    </div>
+  );
+}
 // Header Component
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -94,29 +102,33 @@ function Header() {
   };
 
   return (
-    <header 
-      ref={headerRef}
-      onClick={handleHeaderClick}
-      className={`fixed top-0 left-0 right-0 w-full bg-light-primary dark:bg-dark-primary shadow-md z-50 transition-all duration-300 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
-    >
-      <div className="max-w-[100vw] px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <HeaderLogo />
-          <HeaderNav handleNavClick={handleNavClick} />
-          <HeaderControls
-            darkMode={darkMode}
-            isAnimating={isAnimating}
-            toggleDarkMode={toggleDarkMode}
-            toggleMenu={toggleMenu}
+    <>
+      <StickyLogo />
+      <header 
+        ref={headerRef}
+        onClick={handleHeaderClick}
+        className={`fixed top-0 left-0 right-0 w-full bg-light-primary dark:bg-dark-primary shadow-md z-50 transition-all duration-300 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
+      >
+        <div className="max-w-[100vw] px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <HeaderLogo />
+            <HeaderNav handleNavClick={handleNavClick} />
+            <HeaderControls
+              darkMode={darkMode}
+              isAnimating={isAnimating}
+              toggleDarkMode={toggleDarkMode}
+              toggleMenu={toggleMenu}
+              menuOpen={menuOpen}
+            />
+          </div>
+          <MobileNav
             menuOpen={menuOpen}
+            handleNavClick={handleNavClick}
           />
         </div>
-        <MobileNav
-          menuOpen={menuOpen}
-          handleNavClick={handleNavClick}
-        />
-      </div>
-    </header>
+      </header>
+
+    </>
   );
 }
 
