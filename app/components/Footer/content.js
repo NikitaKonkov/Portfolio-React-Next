@@ -10,7 +10,7 @@
     },
     {
       icon: "./icons/telephone.png",
-      content: "+49 (0176) 23434567",
+      content: "+49 (0176) 84871853",
       url: "tel:+4901762343456",
       isLink: true
     },

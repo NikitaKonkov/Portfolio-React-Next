@@ -22,7 +22,7 @@ export const contactInfo = {
     id: "phone",
     icon: "/icons/telephone.png",
     title: "Phone",
-    value: "+49 176 23434567"
+    value: "+49 0176 84871853"
   },
 };
 
@@ -33,7 +33,7 @@ export const socialLinksContent = [
     name: "GitHub"
   },
   {
-    url: "https://www.linkedin.com/in/mikita-wagner-253361350/",
+    url: "https://www.linkedin.com/",
     icon: "/icons/linkedin.png",
     name: "LinkedIn"
   },
