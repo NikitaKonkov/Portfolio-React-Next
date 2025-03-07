@@ -27,5 +27,6 @@
     { name: 'IntelliJ', icon: '/icons/IntelliJ.png' },
     { name: 'Blender', icon: '/icons/blender.png' },
     { name: 'Unreal Engine', icon: '/icons/unreal.png' },
-    { name: 'Chat-GPT', icon: '/icons/gpt.png' }
+    { name: 'Chat-GPT', icon: '/icons/gpt.png' },
+    { name: 'Docker', icon: '/icons/docker.png' }
   ];

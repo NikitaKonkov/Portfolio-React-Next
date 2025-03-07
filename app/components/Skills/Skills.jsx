@@ -14,7 +14,7 @@ const SkillItem = ({ skill, onClick }) => {
         className="relative rounded-lg shadow-xl p-2 md:p-6 flex flex-row xs:flex-col items-center justify-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-blue-500/20 hover:border-blue-500/50 h-[100px] xs:h-auto xs:aspect-square"
         style={{
           backgroundColor: `${skill.color || 'var(--light-secondary)'}`,
-          opacity: 0.5,
+          opacity: 0.8,
           transition: 'all 0.3s ease'
         }}
       >
